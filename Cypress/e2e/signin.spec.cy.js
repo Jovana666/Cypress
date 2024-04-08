@@ -19,6 +19,8 @@ describe("Sign in Test", () => {
   it("should add cookie if remember me is checked", () => {
     loginPage.login("Heath93", "s3cret");
     loginPage.clickSubmit();
+
+    // ovde mozes da iskoristis Cypress.config("baseUrl") umesto "http://localhost:3000/"
     cy.url().should("equal", "http://localhost:3000/");
     cy.getCookie('connect.sid').its('value').should('exist');
    // .should('have.property', 'Expires/Max-Age')

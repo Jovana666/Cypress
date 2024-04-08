@@ -14,6 +14,8 @@ class LoginPage {
     }
 
     clickSubmit() {
+        // should ti je visak
+        // uradila si check i ne treba ti odmah asercija
         this.elements.rememberMeCheckBox().check().should('be.checked');
         this.elements.submitBtn().click();
     }
