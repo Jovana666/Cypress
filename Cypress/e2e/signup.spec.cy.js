@@ -17,8 +17,7 @@ describe("Sign up test", () => {
     login.login("Jo","joca");
     login.clickSubmit();
     signup.createFirstBankAccount("novi acc","123432234","545654345");
-
-    // nemas aserciju
+    cy.url().should("eq", "http://localhost:3000/")
   });
   
 
